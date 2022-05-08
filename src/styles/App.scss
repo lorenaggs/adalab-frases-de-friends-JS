@@ -1,0 +1,28 @@
+*{
+    margin: 5px;
+}
+
+.listApi{
+    background-color: rgb(176, 231, 213);
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px rgb(129, 118, 118);
+    margin: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.btnAdd{
+    width: 300px;
+}
+
+// .phraseFriends{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
