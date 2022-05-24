@@ -33,7 +33,7 @@ function App() {
         return (
           <li className="listApi" key={index} id={series.character}>
             <p>{series.quote}</p>
-            <p>{series.character}</p>
+            <p className="character">- {series.character}</p>
           </li>
         );
       });
@@ -74,62 +74,80 @@ function App() {
       });
     };
 
-  const handleSearch = (ev) => {
-    setSearch(ev.target.value);
-  };
+    const handleSearch = (ev) => {
+      setSearch(ev.target.value);
+    };
 
-  return (
-    <div className="App">
-      <div className="phraseFriends">
-        <header>
-          <h1>Frases de Friends</h1>
-        </header>
+    return (
+      <div className="App">
+        <div className="phraseFriends">
+          <header>
+            <h1 className="title">Frases de Friends</h1>
+          </header>
 
-        <form action="">
-          <label htmlFor=""> Filtrar por frase</label>
+          <form action="" className="containerform">
+            <div>
+              <label htmlFor="" className="labelinput">
+                Filtrar por frase
+              </label>
+              <input
+                type="search"
+                autoComplete="off"
+                className="rectangleinput"
+                name="searchphrase"
+                value={search}
+                onChange={handleSearch}
+              />
+            </div>
+            <div>
+              <label htmlFor="" className="labelinput">
+                Filtrar por personaje
+              </label>
+              <select
+                className="rectangleinput"
+                onChange={hadleSelectCharacter}
+              >
+                <option id="all">Todos</option>
+                {htmlOptions}
+              </select>
+            </div>
+          </form>
+        </div>
+        <ul>{html}</ul>
+
+        <h2 className="title">Añadir una nueva frase</h2>
+        <form action="" className="containerform">
+          <label htmlFor="" className="labelinput">
+            Frase
+          </label>
           <input
-            type="search"
-            autoComplete="off"
-            name="searchphrase"
-            value={search}
-            onChange={handleSearch}
+            className="rectangleinput"
+            type="text"
+            id="quote"
+            name="quote"
+            value={newPhrase.quote}
+            onChange={handleInputNewPhrase}
           />
-          <label htmlFor="">Filtrar por personaje</label>
-          <select onChange={hadleSelectCharacter}>
-            <option id="all">Todos</option>
-            {htmlOptions}
-          </select>
+          <label htmlFor="" className="labelinput">
+            Personaje
+          </label>
+          <input
+            className="rectangleinput"
+            type="text"
+            id="character"
+            name="character"
+            value={newPhrase.character}
+            onChange={handleInputNewPhrase}
+          />
         </form>
+        <input
+          className="btnAdd"
+          type="submit"
+          value="Añadir una nueva frase"
+          onClick={handleAddNewPhrase}
+        ></input>
       </div>
-      <ul>{html}</ul>
-
-      <h2>Añadir una nueva frase</h2>
-      <form action="">
-        <label htmlFor="">Frase</label>
-        <input
-          type="text"
-          id="quote"
-          name="quote"
-          value={newPhrase.quote}
-          onChange={handleInputNewPhrase}
-        />
-        <label htmlFor="">Personaje</label>
-        <input
-          type="text"
-          id="character"
-          name="character"
-          value={newPhrase.character}
-          onChange={handleInputNewPhrase}
-        />
-      </form>
-      <input
-        className="btnAdd"
-        type="submit"
-        value="Añadir una nueva frase"
-        onClick={handleAddNewPhrase}
-      ></input>
-    </div>
-  );
+    );
 }
 
 export default App;

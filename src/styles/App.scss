@@ -1,28 +1,68 @@
-*{
-    margin: 5px;
+* {
+  margin: 5px;
 }
 
-.listApi{
-    background-color: rgb(176, 231, 213);
-    display: flex;
-    justify-content: space-between;
-    border: solid 1px rgb(129, 118, 118);
-    margin: 10px;
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+.title {
+  text-align: center;
 }
 
-.btnAdd{
-    width: 300px;
+.listApi {
+  background: linear-gradient(
+    180deg,
+    rgb(163, 236, 191) 0%,
+    rgb(226, 183, 233) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  //   justify-content: space-between;
+  border: solid 1px rgb(129, 118, 118);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: justify;
+  color: black !important;
 }
 
-// .phraseFriends{
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.btnAdd {
+  width: 250px;
+  text-align: center;
+  height: 35px;
+  background: rgb(212, 224, 246);
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.labelinput {
+  font-size: 15px;
+  height: 20px;
+  width: 50px;
+}
+
+.rectangleinput {
+  border-radius: 10px;
+  padding: 5px;
+//   width: 150px;
+
+}
+
+.character {
+  color: rgb(20, 119, 205);
+  font-style: italic;
+  display: flex;
+  justify-content: flex-end;
+}
