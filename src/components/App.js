@@ -117,28 +117,32 @@ function App() {
 
         <h2 className="title">Añadir una nueva frase</h2>
         <form action="" className="containerform">
-          <label htmlFor="" className="labelinput">
-            Frase
-          </label>
-          <input
-            className="rectangleinput"
-            type="text"
-            id="quote"
-            name="quote"
-            value={newPhrase.quote}
-            onChange={handleInputNewPhrase}
-          />
-          <label htmlFor="" className="labelinput">
-            Personaje
-          </label>
-          <input
-            className="rectangleinput"
-            type="text"
-            id="character"
-            name="character"
-            value={newPhrase.character}
-            onChange={handleInputNewPhrase}
-          />
+          <div>
+            <label htmlFor="" className="labelinput">
+              Frase
+            </label>
+            <input
+              className="rectangleinput"
+              type="text"
+              id="quote"
+              name="quote"
+              value={newPhrase.quote}
+              onChange={handleInputNewPhrase}
+            />
+          </div>
+          <div>
+            <label htmlFor="" className="labelinput">
+              Personaje
+            </label>
+            <input
+              className="rectangleinput"
+              type="text"
+              id="character"
+              name="character"
+              value={newPhrase.character}
+              onChange={handleInputNewPhrase}
+            />
+          </div>
         </form>
         <input
           className="btnAdd"
